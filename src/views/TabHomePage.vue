@@ -12,7 +12,9 @@
         </ion-toolbar>
       </ion-header>
       <main>
-        <h1>Home</h1>
+        <AppReactions />
+        <AppAds01 />
+        <AppAds02 />
       </main>
     </ion-content>
   </ion-page>
@@ -22,8 +24,21 @@
 import { defineComponent } from 'vue';
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/vue';
 
+import AppReactions from '../components/AppReactions.vue';
+import AppAds01 from '../components/AppAds01.vue';
+import AppAds02 from '../components/AppAds02.vue';
+
 export default  defineComponent({
-  name: 'Tab1Page',
-  components: { IonHeader, IonToolbar, IonTitle, IonContent, IonPage }
+  name: 'TabHomePage',
+  components: {
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    IonPage,
+    AppReactions,
+    AppAds01,
+    AppAds02,
+  }
 });
 </script>

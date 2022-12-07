@@ -109,7 +109,6 @@
     restart: TimelineMethod;
     kill: TimelineMethod;
   }
-  type Slide = Timeline
   interface ItemProps {
     BOX: string;
     ICON: string;
@@ -171,7 +170,7 @@
       }
     })
   }
-  function buildItemProps(name: Name) {
+  function buildItemProps(name: Name): ItemProps {
     return {
       BOX: selector(name, 'box'),
       ICON: selector(name, 'icon'),

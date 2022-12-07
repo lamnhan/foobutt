@@ -3,7 +3,7 @@
 
     <svg viewBox="0 0 450 300">
       <g id="bg">
-        <image id="bg-image" x="-30" y="-10" width="500" height="350" href="/street.jpg"></image>
+        <image id="bg-image" x="-30" y="-10" width="500" height="350" href="/assets/images/street.jpg"></image>
       </g>
 
       <g id="shape" transform="scale(1.5) translate(50 30)">
