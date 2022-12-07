@@ -1,0 +1,7 @@
+{
+  "name": "Foobutt",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
