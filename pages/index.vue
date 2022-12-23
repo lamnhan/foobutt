@@ -1,17 +1,7 @@
 <template>
   <div>
 
-    <section>
-      <Reactions/>
-    </section>
-
-    <section>
-      <Ads01/>
-    </section>
-
-    <section>
-      <Ads02/>
-    </section>
+    <h1>Homepage!</h1>
 
   </div>
 </template>
