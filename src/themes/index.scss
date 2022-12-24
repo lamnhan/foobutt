@@ -1,0 +1,7 @@
+@import './light/default';
+@import './dark/additional';
+
+body, [data-theme] {
+  background: var(--app-color-background);
+  color: var(--app-color-foreground);
+}

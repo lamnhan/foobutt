@@ -1,14 +1,4 @@
-node_modules
-*.log*
-.nuxt
-.nitro
-.cache
-.output
-.env
-dist
 .DS_Store
-
-# Custom elements
-elements/**/*.d.ts
-elements/**/*.js
-elements/**/*.js.map
+.parcel-cache
+node_modules
+dist

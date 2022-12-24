@@ -1,0 +1,19 @@
+@mixin dark_properties {
+  // fonts
+  --app-font-head: 'Noto Sans', sans-serif;
+  --app-font-body: 'Roboto', sans-serif;
+  // sizes
+  --app-size-font: 16px;
+  --app-size-radius: 3px;
+  --app-size-border: 1px;
+  // colors
+  --app-color-primary: #3880ff;
+  --app-color-secondary: #3dc2ff;
+  --app-color-success: #2dd36f;
+  --app-color-light: #f4f5f8;
+  --app-color-dark: #222428;
+  --app-color-background: var(--app-color-dark);
+  --app-color-foreground: var(--app-color-light);
+  // images
+  --app-image-featured: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=');
+}

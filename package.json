@@ -1,21 +1,31 @@
 {
   "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "concurrently --kill-others \"nuxt dev\" \"tsc -w -p tsconfig.elements.json\"",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "staticFiles": {
+    "staticPath": "src/public"
   },
-  "devDependencies": {
-    "concurrently": "^7.6.0",
-    "gts": "^4.0.0",
-    "nuxt": "3.0.0",
-    "sass": "^1.56.1",
-    "typescript": "^4.9.4",
-    "@types/node": "^16.0.0"
+  "scripts": {
+    "serve": "parcel serve",
+    "dev": "npm run serve",
+    "build": "parcel build",
+    "preview": "superstatic dist --port 8080 --host 127.0.0.1",
+    "lint": "gts lint",
+    "check": "tsc --noEmit",
+    "ci": "npm run lint && npm run check && npm run build"
   },
   "dependencies": {
-    "lit": "^2.5.0"
+    "@vaadin/router": "^1.7.4",
+    "lit": "^2.5.0",
+    "tinyx": "^2.2.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.2",
+    "@parcel/transformer-typescript-tsc": "^2.8.2",
+    "gts": "^4.0.0",
+    "parcel": "^2.8.2",
+    "parcel-reporter-static-files-copy": "^1.4.0",
+    "sass": "^1.56.1",
+    "typescript": "^4.9.4"
   }
 }

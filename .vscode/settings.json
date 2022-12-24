@@ -1,10 +1,7 @@
 {
   "files.exclude": {
     ".vscode": true,
-    "**/.nuxt": true,
-    "**/.output": true,
-    "elements/**/*.d.ts": true,
-    "elements/**/*.js": true,
-    "elements/**/*.js.map": true,
+    "**/dist": true,
+    "**/.parcel-cache": true
   }
 }
