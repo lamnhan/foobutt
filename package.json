@@ -9,7 +9,7 @@
     "serve": "parcel serve",
     "dev": "npm run serve",
     "build": "parcel build",
-    "preview": "superstatic dist --port 8080 --host 127.0.0.1",
+    "preview": "superstatic dist --port 8080 --host 0.0.0.0",
     "lint": "gts lint",
     "check": "tsc --noEmit",
     "ci": "npm run lint && npm run check && npm run build"
@@ -26,6 +26,7 @@
     "parcel": "^2.8.2",
     "parcel-reporter-static-files-copy": "^1.4.0",
     "sass": "^1.56.1",
+    "superstatic": "^9.0.0",
     "typescript": "^4.9.4"
   }
 }

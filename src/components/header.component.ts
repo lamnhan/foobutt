@@ -1,32 +1,24 @@
 import {LitElement, html} from 'lit';
 import {customElement, state} from 'lit/decorators.js';
 
-import {store, States} from '../store';
+import {AppStore, Store, States} from '../store';
 
 @customElement('app-header')
 export default class AppHeader extends LitElement {
-  @state() states!: States;
+  @AppStore() store!: Store;
+
   private _unsubscribeStates!: Unsubscriber;
+  @state() states!: States;
 
   connectedCallback() {
     super.connectedCallback();
-    this.onConnected();
+    this._unsubscribeStates = this.store.subscribe(
+      states => (this.states = states)
+    );
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    this.onDisconnected();
-  }
-
-  constructor() {
-    super();
-  }
-
-  onConnected() {
-    this._unsubscribeStates = store.subscribe(states => (this.states = states));
-  }
-
-  onDisconnected() {
     this._unsubscribeStates();
   }
 

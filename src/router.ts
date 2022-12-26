@@ -8,4 +8,12 @@ export function registerRoutes(outlet: HTMLElement, routes: Route[]) {
   return router;
 }
 
+export function AppRouter() {
+  return function (target: any, propertyKey: string) {
+    Reflect.defineProperty(target, propertyKey, {
+      get: () => document.querySelector('app-root')?.router,
+    });
+  };
+}
+
 export {Router};
